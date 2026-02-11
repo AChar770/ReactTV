@@ -10,4 +10,15 @@ export default function ShowDetails({show}) {
     return <p><strong>"Please choose a show to see more"</strong></p>;
 }
 
-return 
+return (
+  <div className="show-details">
+    <EpisodeList
+    name={show.name}
+    episodes={show.episodes}
+    selectedEpisode={selectedEpisode}
+    setSelectedEpisode={setSelectedEpisode}
+  />
+  <EpisodeDetails episode={selectedEpisode} />
+    </div>
+);
+}
